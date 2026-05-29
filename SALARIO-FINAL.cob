@@ -20,7 +20,7 @@
        01 WS-OPCAO          PIC 9 VALUE 0.
        PROCEDURE DIVISION.
 
-      * Menu interativo. Repete atÈ que o usu·rio escolha Sair (2)
+      * Menu interativo. Repete at√© que o usu√°rio escolha Sair (2)
        MAIN-PROCEDURE.
            PERFORM EXIBE-CABECALHO
            PERFORM UNTIL WS-OPCAO = 2
@@ -46,7 +46,7 @@
            END-PERFORM
            STOP RUN.
 
-      * TÌtulo exibido ao iniciar
+      * T√≠tulo exibido ao iniciar
        EXIBE-CABECALHO.
            DISPLAY " "
            DISPLAY "  ============================================"
@@ -54,7 +54,7 @@
            DISPLAY "  ============================================"
            DISPLAY " ".
 
-      * Menu com opÁıes para o usu·rio
+      * Menu com op√ß√µes para o usu√°rio
        EXIBE-MENU.
            DISPLAY "  Escolha uma opcao:"
            DISPLAY "  1 - Calcular salario"
@@ -100,9 +100,8 @@
       * Salario final = salario base + bonus.
        CALCULA-SALARIO.
            COMPUTE WS-SALARIO-FINAL = WS-SALARIO-BASE + WS-BONUS.
-
-      * e exibe o relatorio final na tela via DISPLAY.
-      * Formata valores e exibe relatÛrio final na tela
+      
+      * Formata valores e exibe relat√≥rio final na tela
        EXIBE-RESULTADO.
            MOVE WS-SALARIO-BASE  TO WS-EXIBE-BASE
            MOVE WS-BONUS         TO WS-EXIBE-BONUS
